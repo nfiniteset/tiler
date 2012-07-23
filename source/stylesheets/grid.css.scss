@@ -1,0 +1,25 @@
+.grid {
+  position: relative;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  li {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .filled {
+    opacity: .5;
+  }
+}

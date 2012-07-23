@@ -1,0 +1,10 @@
+src_files:
+    - vendor/vendor.js
+    - application.js
+stylesheets:
+helpers:
+spec_files:
+    - "**/*[sS]pec.*"
+src_dir:
+  - "source/javascripts"
+spec_dir:
