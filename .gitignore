@@ -9,6 +9,7 @@
 
 # Ignore the build directory
 /build
+/resources
 
 # Ignore Sass' cache
 /.sass-cache
