@@ -2,15 +2,19 @@ window.TILER = {
   models: {}
   views: {}
   collections: {}
+  tilesets: {}
 }
 
 $ ->
-  tileset = new TILER.collections.Tileset(TILER.tileset8x8)
+  data = TILER.tilesets.coloredPencils
+  tileset = new TILER.collections.Tileset(data.tiles, data)
   TILER.grid = new TILER.views.Grid
     el: '.grid'
     tileset: tileset
     layout: new TILER.models.TreeLayout
       tileset: tileset
-      width: 8
-      height: 8
+      width: 4
+      height: 4
+      tileHeight: data.tileHeight
+      tileWidth: data.tileWidth
   TILER.grid.render()

@@ -10,10 +10,10 @@ class TILER.views.Tile extends Backbone.View
     @model.bind 'change:filled', @updateFilled, @
 
   updateX: ->
-    @$el.css 'left', @model.get('x') * 100
+    @$el.css 'left', @model.get('x') * 200
   
   updateY: ->
-    @$el.css 'top', @model.get('y') * 100
+    @$el.css 'top', @model.get('y') * 200
   
   updateAsset: ->
     @$('img').attr('src', "/images/#{@model.get('asset')}")

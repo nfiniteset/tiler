@@ -15,8 +15,8 @@ describe 'Layout model', ->
       @layout.placeTile(1, 2, @tile)
     
     it 'assigns a position', ->
-      expect(@tile.x).toBe(1)
-      expect(@tile.y).toBe(2)
+      expect(@tile.get('x')).toBe(1)
+      expect(@tile.get('y')).toBe(2)
       
     it 'removes the tile from availableTiles', ->
       expect(@layout.availableTiles).not.toContain(@tile)
@@ -30,8 +30,8 @@ describe 'Layout model', ->
       @layout.removeTile(@tile)
     
     it 'removes position', ->
-      expect(@tile.x).not.toBeDefined()
-      expect(@tile.y).not.toBeDefined()
+      expect(@tile.get('x')).not.toBeDefined()
+      expect(@tile.get('y')).not.toBeDefined()
       
     it 'adds the tile to availableTiles', ->
       expect(@layout.availableTiles).toContain(@tile)
@@ -53,8 +53,8 @@ describe 'Layout model', ->
       
     it 'removes location from each tile', ->
       for tile in @layout.availableTiles
-        expect(tile.x).not.toBeDefined()
-        expect(tile.y).not.toBeDefined()
+        expect(tile.get('x')).not.toBeDefined()
+        expect(tile.get('y')).not.toBeDefined()
 
   describe '#atBorder', ->
     describe 'with a tile at the upper left', ->

@@ -7,7 +7,8 @@ class TILER.models.TreeLayout extends TILER.models.Layout
     @fillSpace()
     
   placeFirstTile: ->
-    firstTile = @tileset.at(12)
+    # firstTile = @tileset.at(12)
+    firstTile = @getRandomTile()
     @placeTile(Math.floor(@width/2), @height-1, firstTile)
     firstTile
     
@@ -39,11 +40,13 @@ class TILER.models.TreeLayout extends TILER.models.Layout
       @fitsSide(tile, side)
 
   getSpotOnSide: (tile, side) ->
+    x = tile.get('x')
+    y = tile.get('y')
     switch side
-      when 'n' then {x:tile.x, y:tile.y-1}
-      when 'e' then {x:tile.x+1, y:tile.y}
-      when 's' then {x:tile.x, y:tile.y+1}
-      when 'w' then {x:tile.x-1, y:tile.y}
+      when 'n' then {x:x, y:y-1}
+      when 'e' then {x:x+1, y:y}
+      when 's' then {x:x, y:y+1}
+      when 'w' then {x:x-1, y:y}
 
   fitsSide: (tile, side) ->
     matchingSide = switch side

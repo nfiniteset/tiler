@@ -9,16 +9,16 @@ class TILER.models.Layout
     @clearGrid()
 
   clearGrid: ->
-    @tileset.removeFromGrid()
     @availableTiles = @availableTiles.concat @placedTiles
     @placedTiles = []
+    for tile in @availableTiles
+      tile.removeFromGrid()
 
   getRandomTile: ->
     @availableTiles[ Math.floor(Math.random()*@availableTiles.length) ]
 
   placeTile: (x, y, tile) ->
     return if @tileAt(x,y)
-    tile.x = x; tile.y = y
     tile.set('x', x)
     tile.set('y', y)
     @availableTiles.splice(@availableTiles.indexOf(tile), 1)
