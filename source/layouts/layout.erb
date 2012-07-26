@@ -9,9 +9,9 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= data.page.title || "The Middleman" %></title>
     
-    <%= stylesheet_link_tag "all" %>
-    <%= javascript_include_tag  "vendor/vendor" %>
-    <%= javascript_include_tag  "application" %>
+    <link rel="stylesheet" href="stylesheets/all.css" />
+    <script src="javascripts/vendor/vendor.js"></script>
+    <script src="javascripts/application.js"></script>
   </head>
   
   <body class="<%= page_classes %>">
