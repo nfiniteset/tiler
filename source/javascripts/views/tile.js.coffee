@@ -17,7 +17,7 @@ class TILER.views.Tile extends Backbone.View
     @$el.css 'top', @model.get('y') * 200
   
   updateAsset: ->
-    @$('img').attr('src', "/images/#{@model.get('asset')}")
+    @$('img').attr('src', "images/#{@model.get('asset')}")
   
   updateClass: ->
     @$el.toggleClass('filled', !!@model.get('filled'))
