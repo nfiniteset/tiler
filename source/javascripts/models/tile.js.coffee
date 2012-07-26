@@ -10,3 +10,4 @@ class TILER.models.Tile extends Backbone.Model
     @set('x', undefined)
     @set('y', undefined)
     @set('filled', undefined)
+    @set('placed', undefined)

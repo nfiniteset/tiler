@@ -21,6 +21,7 @@ class TILER.models.Layout
     return if @tileAt(x,y)
     tile.set('x', x)
     tile.set('y', y)
+    tile.set('placed', true)
     @availableTiles.splice(@availableTiles.indexOf(tile), 1)
     @placedTiles.push(tile)
     lastTile = tile

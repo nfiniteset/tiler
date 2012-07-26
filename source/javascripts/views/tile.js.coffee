@@ -7,7 +7,8 @@ class TILER.views.Tile extends Backbone.View
     @model.bind 'change:x', @updateX, @
     @model.bind 'change:y', @updateY, @
     @model.bind 'change:asset', @updateAsset, @
-    @model.bind 'change:filled', @updateFilled, @
+    @model.bind 'change:filled', @updateClass, @
+    @model.bind 'change:placed', @updateClass, @
 
   updateX: ->
     @$el.css 'left', @model.get('x') * 200
@@ -18,15 +19,13 @@ class TILER.views.Tile extends Backbone.View
   updateAsset: ->
     @$('img').attr('src', "/images/#{@model.get('asset')}")
   
-  updateFilled: ->
-    if @model.get('filled')
-      @$el.addClass('filled')
-    else
-      @$el.removeClass('filled')
+  updateClass: ->
+    @$el.toggleClass('filled', !!@model.get('filled'))
+    @$el.toggleClass('placed', !!@model.get('placed'))
   
   render: ->
     @updateX()
     @updateY()
     @updateAsset()
-    @updateFilled()
+    @updateClass()
     @
