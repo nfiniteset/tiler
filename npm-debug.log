@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'instal' ]
+2 info using npm@1.1.57
+3 info using node@v0.8.7
+4 verbose node symlink /usr/local/bin/node
+5 verbose read json /Users/sean/Documents/Code/nfiniteset/tiler/package.json
+6 error install Couldn't read dependencies
+7 error Error: no version
+7 error     at validVersion (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:520:32)
+7 error     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:289:23)
+7 error     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:119:33
+7 error     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:48:11)
+7 error     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:241:40
+7 error     at fs.readFile (fs.js:176:14)
+7 error     at fs.close (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:92:5)
+7 error     at Object.oncomplete (fs.js:297:15)
+8 error If you need help, you may report this log at:
+8 error     <http://github.com/isaacs/npm/issues>
+8 error or email it to:
+8 error     <npm-@googlegroups.com>
+9 error System Darwin 12.0.0
+10 error command "node" "/usr/local/bin/npm" "instal"
+11 error cwd /Users/sean/Documents/Code/nfiniteset/tiler
+12 error node -v v0.8.7
+13 error npm -v 1.1.57
+14 verbose exit [ 1, true ]
